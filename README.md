@@ -6,7 +6,7 @@ Dajo helpt bij algemene vragen, programmeerwerk en geautoriseerde servertaken. D
 
 ## Downloaden
 
-Download altijd de nieuwste Windows-versie via [Releases](https://github.com/jorgodaelemans/Dajo-AI-Downloads/releases/latest).
+Download altijd de nieuwste Windows-testversie via [Releases](https://github.com/jorgodaelemans/Dajo-AI-Downloads/releases).
 
 Beschikbare bestanden:
 
