@@ -1,0 +1,62 @@
+{
+  "name": "dajo-ai-public-client",
+  "version": "3.26.24-beta.1",
+  "description": "Secure public Windows client for the hosted Dajo AI beta.",
+  "homepage": "https://github.com/jorgodaelemans/Dajo-AI-Downloads",
+  "author": {
+    "name": "Dajo",
+    "email": "dajo.db-devs@telenet.be"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": true,
+  "main": "src/main.cjs",
+  "scripts": {
+    "check": "node --check src/main.cjs && node --check src/security_policy.cjs && node --test tests/*.test.cjs",
+    "dist:win": "electron-builder --win nsis zip"
+  },
+  "devDependencies": {
+    "electron": "43.4.1",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "be.db-devs.dajo.public",
+    "productName": "Dajo AI Public Beta",
+    "artifactName": "Dajo-AI-Public-Beta-${version}-${os}-${arch}.${ext}",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "package.json",
+      "LICENSE.md",
+      "PRIVACY.md",
+      "THIRD_PARTY_NOTICES.md"
+    ],
+    "win": {
+      "icon": "src/assets/dajo-icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Dajo AI Public Beta"
+    }
+  }
+}
