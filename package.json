@@ -15,7 +15,7 @@
     "dist:win": "electron-builder --win nsis zip"
   },
   "devDependencies": {
-    "electron": "43.4.1",
+    "electron": "43.8.1",
     "electron-builder": "26.15.3"
   },
   "build": {
